@@ -1,17 +1,12 @@
 name: Python unittest
 
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+on: [push]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         python-version: [3.9]
 
